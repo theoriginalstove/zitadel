@@ -3371,7 +3371,7 @@ func TestServer_ListAuthenticationFactors(t *testing.T) {
 				}
 				require.NoError(ttt, err)
 
-				assert.ElementsMatch(t, tt.want.GetResult(), got.GetResult())
+				assert.ElementsMatch(ttt, tt.want.GetResult(), got.GetResult())
 			}, retryDuration, tick, "timeout waiting for expected auth methods result")
 		})
 	}
